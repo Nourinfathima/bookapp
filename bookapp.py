@@ -49,5 +49,10 @@ while True:
         print('Updated sucessfully !!!')
     elif(choice==5):
         print('delete the book selected')
+        book_rentprice = input('Enter the price for each day to be get updated : ')
+        sql = 'DELETE FROM `books` WHERE `book_rentprice`='+book_rentprice
+        mycursor.execute(sql)
+        mydb.commit()
+        print('Deleted sucessfully !!!')
     elif(choice==6):
         break    
